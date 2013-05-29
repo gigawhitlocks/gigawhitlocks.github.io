@@ -16,27 +16,29 @@
   </head>
   <body>
 		<div class="container">
-			<div class="six columns">
-					<h1>Ian Whitlock</h1>
-					<p>
-						<img src="http://www.gravatar.com/avatar/d2bfdde9e639a033ab48def1eacf35c4?s=300" />
+			<div class="six columns" style="background-color:white; text-align: left;">
+				<div style="padding: 10px; margin-left: auto; margin-right: auto;">
+					<h1 style="text-align: center;">Ian Whitlock</h1>
+					<p style="text-align: center;">
+						<img src="http://www.gravatar.com/avatar/d2bfdde9e639a033ab48def1eacf35c4?s=600" style="width: 100%"/>
 						</p>
-
-						<p><ul>
+						<div>
+						<p style="padding:0; margin:0;"><ul>
 							<li><a href="https://github.com/thewhitlockian">GitHub</a></li>
 							<li><a href="http://www.linkedin.com/in/thewhitlockian">LinkedIn</a></li>
 							<li><a href="http://www.google.com/recaptcha/mailhide/d?k=01cxvQUlsBSo836P13rLFMow==&c=cUd_5iO2HybUaHHGeMWcUncPD46_EvkIZSlKwiOBxRY=" target="blank">Email</a></li>
 						</ul>
-						</p>
-						<p><small>
+						
+						<small>
 							<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a>
-						</small></p>
+						</small>
+						</p></div>
 			</div>
-
+			</div>
 			<div class="ten columns">
 				<ul style="margin-top: 10%">
 					{% for post	in site.posts %}
-			    <li style="list-style-type: square">
+			    <li>
 					<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 					<h4>{{ post.date | date: "%d %B %Y" }}</h4>
 						<p>{{ post.excerpt }}</p>
