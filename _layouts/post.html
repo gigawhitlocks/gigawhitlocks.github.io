@@ -17,7 +17,7 @@
   <body>
 		<div class="container">
 			<div class="six columns">
-				<h1>Ian Whitlock</h1>
+				<h1><a href="{{ site.url }}/">Ian Whitlock</a></h1>
 					<p>
 						<img src="http://www.gravatar.com/avatar/d2bfdde9e639a033ab48def1eacf35c4?s=300" />
 						</p>
@@ -35,7 +35,7 @@
 
 			<div class="ten columns">
 				<ul>
-					<h3 style="margin-top: 20%">{{ page.title }}</h3><h4>{{ page.date }}</h4>
+					<h3 style="margin-top: 10%">{{ page.title }}</h3><h4>{{ page.date | date: "%d %B %Y" }}</h4>
 					<p>
 						{{ content }}
 					</p>
