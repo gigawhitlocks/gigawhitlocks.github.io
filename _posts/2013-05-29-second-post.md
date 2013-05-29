@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test Post #2
+title: Second Post
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia mattis viverra. Donec et velit a libero placerat ornare sit amet vitae risus. Nulla id massa mi. In aliquam mauris vitae nulla aliquet accumsan. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam sit amet libero ac urna placerat malesuada. Praesent lobortis libero sit amet mi facilisis gravida. Vivamus eu massa augue, a aliquam diam. Praesent feugiat mauris id nulla interdum vitae elementum metus dignissim.
