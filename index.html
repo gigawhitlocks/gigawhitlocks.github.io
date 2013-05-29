@@ -24,6 +24,7 @@
 
 						<p><ul>
 							<li><a href="https://github.com/thewhitlockian">GitHub</a></li>
+							<li><a href="http://www.linkedin.com/in/thewhitlockian">LinkedIn</a></li>
 							<li><a href="http://www.google.com/recaptcha/mailhide/d?k=01cxvQUlsBSo836P13rLFMow==&c=cUd_5iO2HybUaHHGeMWcUncPD46_EvkIZSlKwiOBxRY=" target="blank">Email</a></li>
 						</ul>
 						</p>
@@ -32,6 +33,13 @@
 						</small></p>
 			</div>
 			<div class="ten columns">
+				<ul>
+				  {% for post in site.posts %}
+			    <li>
+						<a href="{{ post.url }}">{{ post.title }}</a>
+			    </li>
+				  {% endfor %}
+				</ul>
 	 		</div>
     
   </body>
