@@ -26,15 +26,18 @@ So how do we write a decorator? Well, I'm going to reappropriate the example tha
 But what if we want to put some bread on that meat and make it a (meaty) sandwhich? First we need to define the function that will become our decorator:
 
 {% highlight python %}
-    def bread(contents): # notice that it takes a function as an argument
+    def bread(contents): 
+    # notice that it takes a function as an argument
         def add_bread():
              print("bread")
              contents()
              print("bread")
         return add_bread
 
-    # note no () because we're returning the function itself, 
-    # as opposed to returning the value of the called function.
+    """ note no () because we're 
+    returning the function itself, 
+    as opposed to returning the 
+    value of the called function."""
 {% endhighlight %}
 
 This defines a function that takes our first function (meat) and modifies it by defining a new function and returns the new function. Cool!
