@@ -11,7 +11,7 @@ In this case it means that the `@` character can be used to call a special funct
 
 {% highlight python %}
     @decorator
-		def foo():
+    def foo():
         pass
 {% endhighlight %}
 
