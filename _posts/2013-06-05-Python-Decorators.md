@@ -23,7 +23,7 @@ So how do we write a decorator? Well, I'm going to reappropriate the example tha
         print("ham")
 {% endhighlight %}
 
-But what if we want to put some bread on that meat and make it a (meaty) sandwhich? First we need to define the function that will become our decorator:
+But what if we want to put some bread on that meat and make it a (meaty) sandwich? First we need to define the function that will become our decorator:
 
 {% highlight python %}
     def bread(contents): 
