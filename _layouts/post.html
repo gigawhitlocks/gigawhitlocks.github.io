@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="/css/layout.css">
 		<link rel="stylesheet" href="/css/syntax.css">
 	  <style type="text/css">
-      img { width: 100% }
+      #post img { width: 100% }
 
     </style>  
 		<link rel="icon" 
@@ -57,7 +57,7 @@
 			<div class="nine columns omega" style="background-color:white;">
 				<ul style="padding: 10px">
 					<h3>{{ page.title }}</h3><h4>{{ page.date | date: "%d %B %Y" }}</h4>
-					<p>
+          <p id="post">
 						{{ content }}
 					</p>
 				</ul>
