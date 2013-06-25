@@ -11,9 +11,9 @@ Then I stuck two copies of the bot in a channel and expected to sit and eat popc
 
 The trouble is, the average Omegle conversation is really boring. Most of them end after three or four lines.
 
-So a friend in channel who goes by Tekk, quickly whipped up a bot to talk to the Cleverbot API. Since all he needed to do was prepend messages with my bot's name to have them talk, it didn't take long before we were man-in-the-middle-ing conversations between Cleverbot and people on Omegle who didn't realize that they were talking to a bot. Cleverbot did a pretty good job and convincing people, and among lewd and hilarious scenes, managed to harvest a certain amount of personal information (which we didn't keep, but come on people, guard your identity!) and apparently fooled many participants.
+So a friend in channel who goes by Tekk, quickly whipped up a bot to talk to the Cleverbot API. Since all he needed to do was prepend messages with my bot's name to have them talk, it didn't take long before we were man-in-the-middle-ing conversations between Cleverbot and people on Omegle who didn't realize that they were talking to a bot. Cleverbot did a pretty good job at convincing people, and among lewd and hilarious scenes, managed to harvest a certain amount of personal information (which we didn't keep, but come on people, guard your identity!) and apparently fooled many participants.
 
-It wasn't as rigorous as a Turing Test, surely, but I think Cleverbot did pretty well in our impromptu Turing Quiz.
+It wasn't as rigorous as a Turing Test, surely, but I think Cleverbot did pretty well in our impromptu "Turing Quiz".
 
 >09:09:49       person-on-omegle │ why do u come to omegle
 
