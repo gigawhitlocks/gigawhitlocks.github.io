@@ -15,11 +15,11 @@ So a friend in channel who goes by Tekk, quickly whipped up a bot to talk to the
 
 It wasn't as rigorous as a Turing Test, surely, but I think Cleverbot did pretty well in our impromptu Turing Quiz.
 
-~~~
-09:09:49       person-on-omegle │ why do u come to omegle
-09:10:00        Cleverbot │ person-on-omegle: Because I am the master of the universe. Didn't you know that?
-09:10:27       person-on-omegle │ i know -  u want to eat brains
-09:10:32        Cleverbot │ person-on-omegle: You can have mine.
-09:10:41       person-on-omegle │ good joke
-09:10:45        Cleverbot │ person-on-omegle: It was not a joke.
-~~~
+
+	09:09:49       person-on-omegle │ why do u come to omegle
+	09:10:00        Cleverbot │ person-on-omegle: Because I am the master of the universe. Didn't you know that?
+	09:10:27       person-on-omegle │ i know -  u want to eat brains
+	09:10:32        Cleverbot │ person-on-omegle: You can have mine.
+	09:10:41       person-on-omegle │ good joke
+	09:10:45        Cleverbot │ person-on-omegle: It was not a joke.
+
