@@ -50,15 +50,20 @@
 
 /* #Basic Styles
 ================================================== */
-	body {
-		background: #fff;
-		background-image: url('/assets/xv.png');
-		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		color: #444;
-		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-		-webkit-text-size-adjust: 100%;
- }
 
+body {
+  background: #fff url('/assets/hackerschool.png') center center fixed no-repeat;
+  -moz-background-size: cover;
+  background-size: cover;
+  font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #444;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+
+#recent_posts {
+  opacity: 0.85;
+}
 
 /* #Typography
 ================================================== */
