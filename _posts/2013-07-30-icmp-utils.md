@@ -28,6 +28,6 @@ for (i = 0; i < sizeof(message)/2; i++) {
 message.icmp_cksum = (uint16_t) ~(sum + (sum >> 16));
 {% endhighlight %}
 
-`message` in this case is the outgoing packet. `sum` is a 32-bit unsigned int because we needed to add up the value of each byte in `message` and capture the overflow in the upper bits, to be then added `message.icmp_cksum`, which is a 16-bit unsigned int (hence the bit-shift to allowe us to add in the overflow).
+`message` in this case is the outgoing packet. `sum` is a 32-bit unsigned int because we needed to add up the value of each byte in `message` and capture the overflow in the upper bits, to be then added `message.icmp_cksum`, which is a 16-bit unsigned int (hence the bit-shift to allow us to add in the overflow).
 
 This wasn't the biggest project I've tackled at Hacker School, but it's certainly one of my favorites.
