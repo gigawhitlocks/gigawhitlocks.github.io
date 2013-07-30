@@ -40,10 +40,10 @@ ga('send', 'pageview');
 
         });*/
           $("body").css('background-image', function() {
-              if(window.availWidth > 720) {
-                return "/assets/hackerschool.png"
+            if( window.availHeight > 720 ) {
+                return "url('/assets/hackerschool.jpg') center center fixed no-repeat;";
               } else {
-                return "/assets/hackerschool-smaller.png"
+                return "url('/assets/hackerschool-smaller.jpg') center center fixed no-repeat;";
               }
             });
           });
