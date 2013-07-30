@@ -3,7 +3,7 @@ title: Dotfiles and Masochism
 layout: post
 ---
 
-Yeah, today I decided to move all of my dotfiles into a proper git repo, and replace them in their normal locations with symlinks to the organized folder on my system, for easy replication of my vim/i3/etc environments. I was feeling masochistic (actually I particularly enjoy Bash for reasons I cannot fully elucidate), so I wrote [a Bash script](https://github.com/thewhitlockian/dotfiles/blob/master/migrate.bash) to simplify the process of adding new dotfiles to my system and of installing my existing dotfiles onto a new system. After the jump, a snippet I particularly enjoy this recursive backup function that I wrote to be sure nothing that shouldn't be deleted.
+Yeah, today I decided to move all of my dotfiles into a proper git repo, and replace them in their normal locations with symlinks to the organized folder on my system, for easy replication of my vim/i3/etc environments. I was feeling masochistic (actually I particularly enjoy Bash for reasons I cannot fully elucidate), so I wrote [a Bash script](https://github.com/thewhitlockian/dotfiles/blob/master/migrate.bash) to simplify the process of adding new dotfiles to my system and of installing my existing dotfiles onto a new system. After the jump, a snippet I particularly enjoy this recursive backup function that I wrote to be sure nothing that shouldn't be deleted is deleted.
 
 {% highlight bash %}
 		function backup {
