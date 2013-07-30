@@ -25,9 +25,9 @@ href="/css/images/favicon.ico" />
 ga('create', 'UA-41367524-1', 'thewhitlockian.com');
 ga('send', 'pageview');
 </script>
-<!--   <script>
+<script>
       $(document).ready(function () {
-        $("#left_box").mouseenter(function(e){
+/*        $("#left_box").mouseenter(function(e){
           $("#recent_posts").fadeTo(30,0.4);
         });
         $("#left_box").mouseleave(function(e){
@@ -38,9 +38,16 @@ ga('send', 'pageview');
         });
         $("a").mouseleave(function(e){
 
-        });
-      });
- </script> -->
+        });*/
+          $("body").css('background-image', function() {
+              if(window.availWidth > 720) {
+                return "/assets/hackerschool.png"
+              } else {
+                return "/assets/hackerschool-smaller.png"
+              }
+            });
+          });
+ </script>
 </head>
 <body>
 <div class="container" style="padding: 10px;">

@@ -52,7 +52,7 @@
 ================================================== */
 
 body {
-  background: #fff url('/assets/hackerschool.png') center center fixed no-repeat;
+  background: #fff url('/assets/hackerschool-smaller.png') center center fixed no-repeat;
   -moz-background-size: cover;
   background-size: cover;
   font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
