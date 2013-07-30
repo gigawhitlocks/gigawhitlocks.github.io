@@ -31,6 +31,29 @@ ga('create', 'UA-41367524-1', 'thewhitlockian.com');
 ga('send', 'pageview');
 
 </script>
+<script>
+      $(document).ready(function () {
+/*        $("#left_box").mouseenter(function(e){
+          $("#recent_posts").fadeTo(30,0.4);
+        });
+        $("#left_box").mouseleave(function(e){
+          $("#recent_posts").fadeTo(30,0.9);
+        });
+        $("a").mouseenter(function(e){
+
+        });
+        $("a").mouseleave(function(e){
+
+        });*/
+          $("body").css('background-image', function() {
+            if( window.availHeight > 720 ) {
+                return "url('/assets/hackerschool.jpg') center center fixed no-repeat;";
+              } else {
+                return "url('/assets/hackerschool-smaller.jpg') center center fixed no-repeat;";
+              }
+            });
+          });
+ </script>
 </head>
 <body>
 <div class="container" style="padding: 10px;">
