@@ -3,7 +3,7 @@ title: Implementing Ping and Traceroute
 layout: post
 ---
 
-Over the last couple of days a fellow Hacker Schooler (Martin Törnwall, @mtornwall on GitHub) and I implemented [`ping` and `traceroute`](https://github.com/thewhitlockian/icmp-utils) for fun and to learn more about icmp and how these utilities work.
+Over the last couple of days a fellow Hacker Schooler (Martin Törnwall)[http://github.com/mtornwall] and I implemented [`ping` and `traceroute`](https://github.com/thewhitlockian/icmp-utils) for fun and to learn more about icmp and how these utilities work.
 
 One of the surprising things that we discovered early on is that `ping` actually requires root access to run on a Linux machine. This is surprising because, of course, the executable is available to unprivileged users, but the different distributions handle granting this access differently. Mine uses "capabilities" to grant the executable the ability to open raw sockets explicitly and no other permissions. Older distributions use a different method.
 
