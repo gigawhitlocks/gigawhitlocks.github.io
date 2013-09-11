@@ -56,4 +56,4 @@ My great-grandfather Whitlock used to say "do what you love and the money will f
 
 So thank you Hacker School for giving me the most amazing summer of my life, helping me become a stronger, more confident, rigorous, and proficient programmer and computer scientist, and for helping me make a professional connection that will allow me to go forth and continue to do what I love.
 
-Never graduate.
+Never graduate. ![Tiny Hacker School logo](/assets/hackerschool-tiny.png)
