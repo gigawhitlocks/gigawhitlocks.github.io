@@ -34,7 +34,7 @@ I had data in `/mnt` at this point, from the hosed install, which I removed with
 Now here's the fun part. Transfer over your old install to your new PC with:
 
 {% highlight bash %}
-# rsync -aAXv root@remote-server:/* /mnt/ --exclude=\{/dev/*,/proc/*,/sys/*,/tmp/*,/run/*,/mnt/*,/media/*,/lost+found\}
+# rsync -aAXv root@remote-server:/* /mnt/ --exclude={{/dev/*,/proc/*,/sys/*,/tmp/*,/run/*,/mnt/*,/media/*,/lost+found\}}
 {% endhighlight %}
 
 I added `/home` to the `--exclude` list to avoid my user data, but you should do as necessary here. This transfers all non-special system files to your new install. The flags for `rsync` are taken from [the Arch wiki guide on backing up a full system with rsync](https://wiki.archlinux.org/index.php/Full_System_Backup_with_rsync). They preserve file ownership and permissions across the transfer, and of course if `rsync` fails due to a network outage or something, call it again and it'll start where it left off.
