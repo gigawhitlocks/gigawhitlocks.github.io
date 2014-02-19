@@ -5,14 +5,14 @@ layout: post
 
 Two days ago I cloned my Arch install off of my laptop onto my desktop. This was a fun task that illuminated some of the fundamental strengths of Arch's design, and this post talks about how I went about doing this.
 
-##Background
+####Background
 Anyone who's done an Arch Linux installation knows that it's a tedious affair. There's no automated installer, and instead the install disk is a live Arch system with a couple of special Arch-specific commandline tools and the rest of the toolbox one needs for installing an operating system. This, combined with the wonderful documentation on the Arch wiki are the installer.
 
 This is fine when you only want to do one or two Arch installs. The first time is fun on its own as a learning experience, but after that it starts to be a real chore, especially getting all of your software and your environment all set up. This becomes especially apparent if you generally set things up the same way on all of your machines.
 
 I've spent a lot of time on my environment, especially on my laptop where I spend most of my time. This weekend I finally decided that I wanted to copy the setup that I have on my laptop on my desktop, which has had a hosed Arch install on it for almost a year now, that I haven't had the time (due to Arch's tedious install process) to fix.
 
-##Guide
+####Guide
 Forewarning: if you want to use this is as a guide, it's not entirely complete. You should be comfortable with Linux and the command line already so that you can fill in the blanks and don't need to copy and paste most commands. Considering this guide involves already having installed one Arch system, if you're here you're probably fine.
 
 First, I download an Arch live CD from archlinux.org and booted it. Since I had a hosed Arch install, I was able to skip the formatting steps in the [installation guide](https://wiki.archlinux.org/index.php/Installation_guide). If you're following along, go ahead and prepare your disk normally.
@@ -35,5 +35,5 @@ I added `/home` to the `--exclude` list to avoid my user data, but you should do
 
 Once this is done, the system is mostly installed. You can skip the `pacstrap` step in the installation guide and move onto [Configure the system](https://wiki.archlinux.org/index.php/Installation_guide#Configure_the_system). You'll probably want to set your hostname in `/etc/hostname` as though this is a fresh install, and you definitely still want to run the `genfstab` and `mkinitcpio` commands listed in the install guide. Finish up by [installing a bootloader](https://wiki.archlinux.org/index.php/Boot_Loaders) and then reboot and enjoy your system that is now exactly the same as the previous one.
 
-##TL;DR:
+####TL;DR:
 You can clone an Arch install by running the above `rsync` command instead of `pacstrap` during an installation. This eliminates the need for all (or most) post-install setup, and will leave you with a clone of the original system. Pretty cool!
