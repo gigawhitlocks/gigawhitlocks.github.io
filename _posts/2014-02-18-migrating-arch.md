@@ -23,7 +23,7 @@ Get your networking working and install `rsync`. For the copy-pasters among us, 
 
 {% highlight bash %}
 # pacman -Sy && pacman -S rsync
-{% endhighlight &}
+{% endhighlight %}
 
 Mount your new `/` directory at `/mnt` like the install guide tells you, along with any other system directories that you've given their own partitions (like `/boot`). I wanted to preserve the data in `/home` from my hosed install, so I didn't mount `/home`. This process will be even more complete if you do mount your `/home` in `/mnt/home` and copy over your user data too, but I skipped this since the only user data I wanted is already stored in my GitHub dotfiles repository.
 
@@ -34,7 +34,7 @@ I had data in `/mnt` at this point, from the hosed install, which I removed with
 Now here's the fun part. Transfer over your old install to your new PC with:
 
 {% highlight bash %}
-# rsync -aAXv root@remote-server:/* /mnt/ 
+# rsync -aAXv root@remote-server:/* /mnt/ --exclude={/dev/*,/proc/*,/sys/*,/tmp/*,/run/*,/mnt/*,/media/*,/lost+found\}
 {% endhighlight %}
 
 I added `/home` to the `--exclude` list to avoid my user data, but you should do as necessary here. This transfers all non-special system files to your new install. The flags for `rsync` are taken from [the Arch wiki guide on backing up a full system with rsync](https://wiki.archlinux.org/index.php/Full_System_Backup_with_rsync). They preserve file ownership and permissions across the transfer, and of course if `rsync` fails due to a network outage or something, call it again and it'll start where it left off.
