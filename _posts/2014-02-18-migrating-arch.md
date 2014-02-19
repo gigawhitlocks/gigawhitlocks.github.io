@@ -3,9 +3,10 @@ title: Cloning Arch Linux to New Hardware
 layout: post
 ---
 
-###Background
-
 Two days ago I cloned my Arch install off of my laptop onto my desktop. This was a fun task that illuminated some of the fundamental strengths of Arch's design, and this post talks about how I went about doing this.
+
+
+###Background
 
 Anyone who's done an Arch Linux installation knows that it's a tedious affair. There's no automated installer, and instead the install disk is a live Arch system with a couple of special Arch-specific commandline tools and the rest of the toolbox one needs for installing an operating system. This, combined with the wonderful documentation on the Arch wiki are the installer.
 
@@ -14,16 +15,12 @@ This is fine when you only want to do one or two Arch installs. The first time i
 I've spent a lot of time on my environment, especially on my laptop where I spend most of my time. This weekend I finally decided that I wanted to copy the setup that I have on my laptop on my desktop, which has had a hosed Arch install on it for almost a year now, that I haven't had the time (due to Arch's tedious install process) to fix.
 
 
-###Cloning an Arch Linux Install
+###Guide
 Forewarning: if you want to use this is as a guide, it's not entirely complete. You should be comfortable with Linux and the command line already so that you can fill in the blanks and don't need to copy and paste most commands. Considering this guide involves already having installed one Arch system, if you're here you're probably fine.
 
 First, I download an Arch live CD from archlinux.org and booted it. Since I had a hosed Arch install, I was able to skip the formatting steps in the [installation guide](https://wiki.archlinux.org/index.php/Installation_guide). If you're following along, go ahead and prepare your disk normally.
 
-Get your networking working and install `rsync`. For the copy-pasters among us, this is:
-
-{% highlight bash %}
-# pacman -Sy && pacman -S rsync
-{% endhighlight %}
+Get your networking working and install `rsync` with `pacman`.
 
 Mount your new `/` directory at `/mnt` like the install guide tells you, along with any other system directories that you've given their own partitions (like `/boot`). I wanted to preserve the data in `/home` from my hosed install, so I didn't mount `/home`. This process will be even more complete if you do mount your `/home` in `/mnt/home` and copy over your user data too, but I skipped this since the only user data I wanted is already stored in my GitHub dotfiles repository.
 
