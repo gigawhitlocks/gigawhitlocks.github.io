@@ -5,6 +5,7 @@ layout: post
 
 Two days ago I cloned my Arch install off of my laptop onto my desktop. This was a fun task that illuminated some of the fundamental strengths of Arch's design, and this post talks about how I went about doing this.
 
+
 ###Background
 Anyone who's done an Arch Linux installation knows that it's a tedious affair. There's no automated installer, and instead the install disk is a live Arch system with a couple of special Arch-specific commandline tools and the rest of the toolbox one needs for installing an operating system. This, combined with the wonderful documentation on the Arch wiki are the installer.
 
@@ -28,7 +29,7 @@ I had data in `/mnt` at this point, from the hosed install, which I removed with
 Now here's the fun part. Transfer over your old install to your new PC with:
 
 {% highlight bash %}
-# rsync -aAXv root@remote-server:/* /mnt/ --exclude={/dev/*,/proc/*,/sys/*,/tmp/*,/run/*,/mnt/*,/media/*,/lost+found\}
+# rsync -aAXv root@remote-server:/* /mnt/ --exclude={/dev/*,/proc/*,/sys/*,/tmp/*,/run/*,/mnt/*,/media/*,/lost+found}
 {% endhighlight %}
 
 I added `/home` to the `--exclude` list to avoid my user data, but you should do as necessary here. This transfers all non-special system files to your new install. The flags for `rsync` are taken from [the Arch wiki guide on backing up a full system with rsync](https://wiki.archlinux.org/index.php/Full_System_Backup_with_rsync). They preserve file ownership and permissions across the transfer, and of course if `rsync` fails due to a network outage or something, call it again and it'll start where it left off.
