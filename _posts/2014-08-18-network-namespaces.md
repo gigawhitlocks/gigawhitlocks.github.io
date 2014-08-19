@@ -94,7 +94,7 @@ $ sudo ip netns exec blue ping google.com
 ping: unknown host google.com
 {% endhighlight %}
 
-While this might be OK for some setups, it wasn't OK for me, so after being unable to figure out how to get the process inside to see the outside world, I reached out to the Hacker School network and was aided by one [Andrew Mulholland](http://twitter.com/itwasntandy) who helped me find an appropriate IPTables rule to set up NAT, and that's the following:
+While this might be OK for some setups, it wasn't OK for me, so after being unable to figure out how to get the process inside to see the outside world, I reached out to the Hacker School network and was aided by one [Andrew Mulholland](http://twitter.com/itwasntandy) who helped me by creating an appropriate IPTables rule to set up NAT, and that's the following:
 
 {% highlight bash %}
 $ sudo iptables -t nat -A POSTROUTING -s 10.1.1.0/31 -d 0.0.0.0/0 -j MASQUERADE
@@ -118,3 +118,16 @@ PING google.com (173.194.115.66) 56(84) bytes of data.
 2 packets transmitted, 2 received, 0% packet loss, time 1001ms
 rtt min/avg/max/mdev = 15.240/15.576/15.912/0.336 ms
 {% endhighlight %}
+
+
+Finally, the point of all this, was so that we can test what happens when network connectivity is bad. Let's tell the kernel to drop 30% of the packets that are sent through `veth1` to simulate a "bad network" and then use ping to see the new packet queueing strategy in action. We do this with the `tc` command, which stands for "traffic control" and more information on this command and on reshaping network can be seen by running `man tc`, `man netem`, and also on [this helpful website](http://www.linuxfoundation.org/collaborate/workgroups/networking/netem).
+
+{% highlight bash %}
+$ sudo ip netns exec blue tc qdisc add dev veth1 root netem loss 30%
+{% endhighlight %}
+
+Now we can see the effect of this simply by `ping`ing `10.1.1.1` from inside of the root namespace:
+
+{% highlight bash %}
+
+{% endhighlight bash %}
