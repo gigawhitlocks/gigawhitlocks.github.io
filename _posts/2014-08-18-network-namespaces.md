@@ -100,7 +100,7 @@ While this might be OK for some setups, it wasn't OK for me, so after being unab
 $ sudo iptables -t nat -A POSTROUTING -s 10.1.1.0/31 -d 0.0.0.0/0 -j MASQUERADE
 {% endhighlight %}
 
-This rule tells `iptables` to add the source `10.1.1.0/31` to the NAT table, to intercept any traffic headed to `0.0.0.0/0` (any destination) and to `MASQUERADE` that traffic, ie, use NAT so that to the outside world it appears to be from the same IP address as the root namespace.
+This rule tells `iptables` to add the source `10.1.1.0/31` to the NAT table, to intercept any traffic headed to `0.0.0.0/0` (any destination) and to `MASQUERADE` that traffic, ie, use NAT so that to the outside world traffic appears to be from the same IP address as the root namespace.
 
 Additionally we must allow NAT on the system:
 
