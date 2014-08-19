@@ -27,7 +27,7 @@ I had data in `/mnt` at this point, from the hosed install, which I removed with
 
 Now here's the fun part. Transfer over your old install to your new PC with:
 
-{% highlight bash %}
+{% highlight %}
 # rsync -aAXv root@remote-server:/* /mnt/ --exclude={/dev/*,/proc/*,/sys/*,/tmp/*,/run/*,/mnt/*,/media/*,/lost+found}
 {% endhighlight %}
 
