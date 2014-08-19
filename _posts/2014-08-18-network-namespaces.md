@@ -129,5 +129,22 @@ $ sudo ip netns exec blue tc qdisc add dev veth1 root netem loss 30%
 Now we can see the effect of this simply by `ping`ing `10.1.1.1` from inside of the root namespace:
 
 {% highlight bash %}
-
+$ ping 10.1.1.1
+PING 10.1.1.1 (10.1.1.1) 56(84) bytes of data.
+64 bytes from 10.1.1.1: icmp_seq=3 ttl=64 time=0.082 ms
+64 bytes from 10.1.1.1: icmp_seq=4 ttl=64 time=0.077 ms
+64 bytes from 10.1.1.1: icmp_seq=5 ttl=64 time=0.073 ms
+64 bytes from 10.1.1.1: icmp_seq=6 ttl=64 time=0.074 ms
+64 bytes from 10.1.1.1: icmp_seq=7 ttl=64 time=0.077 ms
+64 bytes from 10.1.1.1: icmp_seq=10 ttl=64 time=0.081 ms
+^C
+--- 10.1.1.1 ping statistics ---
+11 packets transmitted, 6 received, 45% packet loss, time 9996ms
+rtt min/avg/max/mdev = 0.073/0.077/0.082/0.007 ms
 {% endhighlight bash %}
+
+Finally, you can see that due to the laws of randomness our actual dropped packet rate was a little higher than we requested, but this will converge on the requested rate as `n` packets goes to infinity.
+
+I hope this little walkthrough on setting up network namespaces, allowing the new namespace to see the outside world through NAT, and altering the traffic control rules for the isolated namespace are helpful to someone out there, and/or are inspiration for more complicated setups and traffic shaping rules.
+
+I think this stuff is a lot of fun, one way or the other!
