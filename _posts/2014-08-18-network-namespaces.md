@@ -9,11 +9,11 @@ Our application is still under wraps right now, so I can't talk too much about i
 
 I found some okay guides for setting up a network namespace on Google but they all stopped, irritatingly, right when it became time to make the namespace talk to the outside world. Most said something like "now just set up a bridge!" which turned out to be very difficult (it might not be possible at all, but I'm unsure) on EC2.
 
-So first let's talk about what a network namespace is. A network namespace is a feature provided by the `ip-netns` tool (which is run as `ip netns` but looked up as `man ip-netns` just to confuse everyone) which is part of the poorly-understood `ip` suite of tools that was supposed to deprecate `ifconfig`, `route`, et al seven years ago, but for whatever reason most of the Linux community is not only still using `ifconfig` but is teaching newcomers to use it. Anyway that's not the point.
+So first let's talk about what a network namespace is. A network namespace is a feature provided by the `ip-netns` tool (which is run as `ip netns` but looked up as `man ip-netns` just to confuse everyone) which is part of the seemingly-poorly-understood `ip` suite of tools that was supposed to deprecate `ifconfig`, `route`, et al seven years ago, but for whatever reason most of the Linux community is not only still using `ifconfig` but is teaching newcomers to use it. Anyway that's not the point.
 
-The network namespace feature added to the kernel about seven years ago and configurable using `ip netns` is a feature that allows us to set up **isolated, private virtual subnets** on one host, and connect them to each other with virtual ethernet devices, to simulate a larger LAN on a single host.
+Functionally, `ip netns` is a feature that allows us to set up isolated, private virtual subnets on one host, and connect them to each other with virtual ethernet devices, to simulate a larger LAN on a single host.
 
-If you've used Docker or LXC (Linux Containers), this should seem familiar. Docker uses `ip-netns` in their implementation of containers, or rather, they use LXCs to build Docker, which in turn uses `ip-netns`.
+If you've used Docker or LXC (Linux Containers), this should seem familiar. Docker uses `ip-netns` in their implementation of containers, or rather, they use LXCs to build Docker, which in turn use `ip-netns`.
 
 In my case I wanted to set up these namespaces to allow me to degrade the connection from one service to another using the `tc` tool so I could see how these services behave when the network is misbehaving.
 
